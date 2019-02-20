@@ -24,6 +24,15 @@ void free_array(int **arr, int cols){
 	free(arr);
 }
 
+int compare_array(int *arr1, int *arr2, int size){
+	for (int i = 0; i < size; i++){
+		if (arr1[i] != arr2[i]){
+			return 1;
+		}
+	}
+	return 0;
+}
+
 int main() {
 	const char * files[] = {"input1.txt", "input2.txt", "input3.txt"};
 	// const char * files[] = {"tryout.txt"};
@@ -62,12 +71,15 @@ int main() {
 			print_array_2D(segments, s, 2);
 			print_array(points, p);
 
-			points_segments_sort(segments, points, s, p);
-			//TODO: pass s, p, segments, and points to your two algorithms
-			//the output should be an array of size p containing
-			//-for each point- the number of covering segments
-
-			//TODO: implement - compare these outputs from 2 algorithms
+			int * result_sort = points_segments_sort(segments, points, s, p);
+			int * result_naive = points_segments_naive(segments, points, s, p);
+			if (compare_array(result_sort, result_naive, p)){
+				printf("Incorrect!\nNaive got:");
+				print_array(result_naive, p);
+				printf("\nBut sort got:");
+				print_array(result_sort, p);
+				return 0;
+			}
 			free_array(segments, s);
 			free(points);
 		}
