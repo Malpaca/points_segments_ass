@@ -10,7 +10,7 @@ void print_points(Point *points, int rows){
 int compfunc(const void * pa, const void * pb){
     Point a = *(Point *)pa;
     Point b = *(Point *)pb;
-  printf("%d, %d, %d\n", a.position,b.position, a.position - b.position);
+  // printf("%d, %d, %d\n", a.position,b.position, a.position - b.position);
   return a.position - b.position;
 }
 

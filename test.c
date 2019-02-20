@@ -25,10 +25,10 @@ void free_array(int **arr, int cols){
 }
 
 int main() {
-	// const char * files[] = {"input1.txt", "input2.txt", "input3.txt"};
-	const char * files[] = {"tryout.txt"};
+	const char * files[] = {"input1.txt", "input2.txt", "input3.txt"};
+	// const char * files[] = {"tryout.txt"};
 
-	for (int f=0; f < 1; f++){
+	for (int f=0; f < 3; f++){
 		FILE *pfile = fopen(files[f], "r");
 		if(pfile == NULL)  {
 			printf("Error opening file %s\n", files[f]);
