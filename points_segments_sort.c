@@ -46,7 +46,7 @@ int* solve(Point * whole, int size, int p){
 int * points_segments_sort(int ** segments, int * points, int s, int p){
   Point * whole = generate_point(segments, points, s, p);
   qsort(whole, 2*s+p, sizeof(Point), compfunc);
-  print_points(whole, 2*s+p);
+  // print_points(whole, 2*s+p);
   int* result = solve(whole, 2*s+p, p);
   // print_array(result, p);
   free(whole);

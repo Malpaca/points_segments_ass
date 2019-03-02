@@ -80,6 +80,7 @@ int main() {
 				print_array(result_sort, p);
 				return 0;
 			}
+			print_array(result_sort, p);
 			free_array(segments, s);
 			free(points);
 		}
