@@ -78,10 +78,12 @@ int main() {
 				print_array(result_naive, p);
 				printf("\nBut sort got:");
 				print_array(result_sort, p);
+				printf("\n");
 				return 0;
 			} else{
 				printf("Result is:");
 				print_array(result_sort, p);
+				printf("\n");
 			}
 			free_array(segments, s);
 			free(points);
