@@ -79,8 +79,10 @@ int main() {
 				printf("\nBut sort got:");
 				print_array(result_sort, p);
 				return 0;
+			} else{
+				printf("Result is:");
+				print_array(result_sort, p);
 			}
-			print_array(result_sort, p);
 			free_array(segments, s);
 			free(points);
 		}
